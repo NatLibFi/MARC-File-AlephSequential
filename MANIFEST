@@ -1,0 +1,6 @@
+Changes
+Makefile.PL
+MANIFEST
+README
+t/MARC-File-AlephSequential.t
+lib/MARC/File/AlephSequential.pm
