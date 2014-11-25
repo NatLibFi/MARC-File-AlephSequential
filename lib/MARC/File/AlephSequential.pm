@@ -168,13 +168,13 @@ sub decode {
                 $marc->append_fields($field);
             } else {
                 
-                
-                #Does not parse correctly if field is cut with $9 subfield (where it's longer than 2000 bytes) in decode()
+                # Does not parse correctly if field is cut with $9 subfield (where it's longer than 2000 bytes) in decode()
                 # if you fix it, change the TODO -list in the end of this file too.
                 my @subfields = ();
                 my @subfieldRaw = split /\$\$/, $data;
                 #subfield data starts with $$, so first element is always empty.
                 shift(@subfieldRaw); 
+
                 foreach my $subfield (@subfieldRaw) {
                     
                     my $code = substr($subfield,0,1);
@@ -186,8 +186,7 @@ sub decode {
                     });
                 }
                 
-                if (defined($fieldDef) && $fieldDef->{'tag'} == $tag && $subfields[0]->{'code'} == 9 && $subfields[0]->{'data'} == "^^") {
-                    print "JATQ";
+                if (defined($fieldDef) && $fieldDef->{'tag'} == $tag && $subfields[0]->{'code'} == 9 && $subfields[0]->{'data'} eq "^^") {
                
                     my $lastSubfield = pop(@{$fieldDef->{'subfields'}});
                     if ($lastSubfield->{'code'} == $subfields[1]->{'code'}) {
@@ -196,7 +195,7 @@ sub decode {
                         # it looks like the fields are broken from spaces, and the space chars will go missing, so adding one.
                         $lastSubfield->{'data'} = substr($lastSubfield->{'data'},0,-2) .' '. $subfields[1]->{'data'}  ;
                         #$lastSubfield->{'data'} = $lastSubfield->{'data'}  . $subfields[1]->{'data'}  ;
-                        push($fieldDef->{'subfields'}, $lastSubfield);
+                        push(@{$fieldDef->{'subfields'}}, $lastSubfield);
                     } else {
                         
                     }

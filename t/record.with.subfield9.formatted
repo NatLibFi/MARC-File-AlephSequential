@@ -1,0 +1,36 @@
+LDR ^^^^^ccm^a22002894i^4500
+FMT     MU
+001     000150781
+005     20140411161003.0
+007     qu
+008     940914s1992^^^^fi^rcz||||||||||||||fin||
+020    _a951-9377-31-X
+035    _9951937731X
+035    _90000-38360
+041 0  _afin
+084    _a78.8911
+       _2ykl
+245 00 _aRokkivihko 92.
+260    _aHelsinki :
+       _bLove kustannus,
+       _c[1992]
+       _e([Vantaa] :
+       _fKajoprint)
+300    _a1 sävelmäkokoelma (50 s.) ;
+       _c30 cm.
+336    _aMusiikki (notatoitu)
+337    _aei välittävää laitetta
+500    _aText: finska.
+500    _aSoitinnus: Tangentinstr., ackordbeteckningar.
+505 0  _a15 stycken
+500    _aSoitinnus: kosketinsoitin, sointumerkit.
+505 0  _a15 kappaletta.
+546    _aSanat: suomi.
+650  7 _arock
+       _zSuomi
+       _y1990-luku
+       _2musa
+650  7 _arock
+       _zFinland
+       _y1990-tal
+       _2allars
