@@ -220,7 +220,7 @@ sub decode {
             }
 
         } else {
-            print STDOUT "Warning: Skipping unrecognized line: $line\n";
+            print STDERR "Warning: Skipping unrecognized line: $line\n";
         }
         
     }
