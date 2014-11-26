@@ -6,7 +6,7 @@ MARC::File::AlephSequential - AlephSequential-specific file handling
 
 =cut
 
-our $VERSION = '0.2';
+our $VERSION = '0.2.1';
 
 use strict;
 use integer;
@@ -220,7 +220,7 @@ sub decode {
             }
 
         } else {
-            print STDOUT "Warning: Skipping unrecocnized line: $line\n";
+            print STDOUT "Warning: Skipping unrecognized line: $line\n";
         }
         
     }
